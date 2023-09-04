@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webshop</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Webshopunk</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Főoldal</a></li>
+            <li><a href="#">Termékek</a></li>
+            <li><a href="#">Rólunk</a></li>
+            <li><a href="#">Elérhetőség</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="product" id="product1">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Termék 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="price">$99.99</p>
+            <button onclick="addToCart('product1', 'Product 1', 99.99)">Kosárhoz adás</button>
+        </section>
+
+        <section class="product" id="product2">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Termék 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="price">$49.99</p>
+            <button onclick="addToCart('product2', 'Product 2', 49.99)">Kosárhoz adás</button>
+        </section>
+
+        <!-- Add more product sections here -->
+    </main>
+
+    <aside>
+        <h2>Kosár</h2>
+        <ul id="cart">
+            <!-- Cart items will be added here dynamically -->
+        </ul>
+        <p>Végösszeg: $<span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Fizetés</button>
+    </aside>
+    
+    <footer>
+        <p>&copy; 2023 My Webshop</p>
+    </footer>
+
+    <script>
+        const cart = {};
+
+        function addToCart(productId, productName, productPrice) {
+            if (!cart[productId]) {
+                cart[productId] = {
+                    name: productName,
+                    price: productPrice,
+                    quantity: 1
+                };
+            } else {
+                cart[productId].quantity++;
+            }
+
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cart');
+            const cartTotal = document.getElementById('cart-total');
+            let total = 0;
+
+            cartList.innerHTML = '';
+
+            for (const productId in cart) {
+                const { name, price, quantity } = cart[productId];
+                const listItem = document.createElement('li');
+                listItem.textContent = `${name} - $${price} x ${quantity}`;
+                cartList.appendChild(listItem);
+                total += price * quantity;
+            }
+
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        function checkout() {
+            // Implement your checkout logic here (e.g., send the cart data to a server).
+            alert('Checkout button clicked. Cart contents: ' + JSON.stringify(cart));
+        }
+    </script>
+    <aside>
+        <h2>Cart</h2>
+        <ul id="cart">
+            <!-- Cart items will be added here dynamically -->
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="openCartPage()">Checkout</button>
+    </aside>
+
+    <!-- ... Your existing JavaScript code ... -->
+
+    <script>
+        // ... Your existing JavaScript code ...
+
+        function openCartPage() {
+            // Save the cart data to localStorage before opening the cart page
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Open the cart.html page in a new window or tab
+            window.open('kosár.html');
+        }
+</script>
+</body>
+</html>
