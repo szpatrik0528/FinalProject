@@ -13,11 +13,12 @@
     
     <main>
         <ul id="cart-list">
-            
         </ul>
-        <p>Végösszeg: <span id="cart-total"> 0</span> Ft</p>
         
+
     </main>
+    <li id="cart-total"></li>
+
     
     <footer>
         <p>&copy; 2023 My Webshop</p>
@@ -38,20 +39,30 @@
             for (const productId in storedCart) {
                 const { name, price, quantity } = storedCart[productId];
                 const listItem = document.createElement('li');
-                listItem.textContent = `${name} - $${price} x ${quantity}`;
+                listItem.textContent = `${name} - ${price} Ft x ${quantity}`;
                 cartList.appendChild(listItem);
                 total += price * quantity;
             }
 
-            cartTotal.textContent = total.toFixed(2);
+            // Hozzáadjuk a végösszeget a lista alatt, nem a listához
+            cartTotal.textContent = `Végösszeg: ${total.toFixed(0)} Ft`;
         }
 
         // Initial cart display
         displayCart();
     </script>
     <!-- ... Your existing HTML code ... -->
-
-
-
+    
+    <style>
+        #cart-total-container {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        #cart-total {
+            padding: 5px;
+        }
+    </style>
 </body>
 </html>
