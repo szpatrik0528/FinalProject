@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kosár</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="container">
     <header>
-        <h1>Kosar</h1>
-        <div class="header-content">
-            <button onclick="goBack()"><img src="/Game/képek/93634.png" id="back-button"></button>
-        </div>
+        <h1>Your Cart</h1>
     </header>
     
     <main>
         <ul id="cart-list">
+            <!-- Cart items will be added here dynamically -->
         </ul>
-        
-
+        <p>Total: $<span id="cart-total">0.00</span></p>
     </main>
-    <li id="cart-total"></li>
-
     
     <footer>
         <p>&copy; 2023 My Webshop</p>
@@ -43,31 +37,20 @@
             for (const productId in storedCart) {
                 const { name, price, quantity } = storedCart[productId];
                 const listItem = document.createElement('li');
-                listItem.textContent = `${name} - ${price} Ft x ${quantity}`;
+                listItem.textContent = `${name} - $${price} x ${quantity}`;
                 cartList.appendChild(listItem);
                 total += price * quantity;
             }
 
-            // Hozzáadjuk a végösszeget a lista alatt, nem a listához
-            cartTotal.textContent = `Végösszeg: ${total.toFixed(0)} Ft`;
+            cartTotal.textContent = total.toFixed(2);
         }
 
         // Initial cart display
         displayCart();
     </script>
     <!-- ... Your existing HTML code ... -->
-    
-    <style>
-        #cart-total-container {
-            text-align: right;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        
-        #cart-total {
-            padding: 5px;
-        }
-    </style>
-</div>
+
+
+
 </body>
 </html>

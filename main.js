@@ -48,3 +48,6 @@ function openCartPage() {
     localStorage.setItem('cart', JSON.stringify(cart));
     window.open('kosar.html');
 }
+function goBack() {
+    window.history.back();
+}
