@@ -25,12 +25,12 @@ function updateCartDisplay() {
     for (const productId in cart) {
         const { name, price, quantity } = cart[productId];
         const listItem = document.createElement('li');
-        listItem.textContent = `${name} - $${price} x ${quantity}`;
+        listItem.textContent = `${name} - ${price} Ft x ${quantity}`;
         cartList.appendChild(listItem);
         totalFt += price * quantity * exchangeRate;
     }
 
-    cartTotal.textContent = totalFt.toFixed(2) + ' Ft';
+    cartTotal.textContent = totalFt.toFixed(0) + ' Ft';
 }
 
 function checkout() {
