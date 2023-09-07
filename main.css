@@ -40,7 +40,10 @@ header {
     padding: 14px 16px; 
     text-decoration: none;
 }
-
+.navbar{
+    box-shadow: 10px 10px 0px 0px;
+    margin-bottom: 100px;
+}
 .navbar a:hover {
     background-color: #ddd; 
     color: #333;
@@ -128,9 +131,9 @@ margin-top: 16%;
 }
 #dowbcg{
     background-image:url(download-background.jpg);
-    width: auto;
+    height: auto;
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 #dg-main{
     
@@ -141,4 +144,12 @@ margin-top: 16%;
     font-family: "PressStart2P";
     src: url('PressStart2P.ttf');
 
+}
+.infoimg{
+    height: 200px;
+}
+.card{
+    height: 400px;
+    width: 300px;
+    margin:5px 5px 15px 5px;
 }
