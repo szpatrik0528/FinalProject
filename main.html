@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Webshop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -25,67 +26,62 @@
             </ul>
         </nav>
 
-        <main>
-            <section class="product" id="product1">
-                <img src="/Game/képek/kard.png">
-                <h2>Törhetetlen kard</h2>
-                <p>kard</p>
-                <p class="price">10000 Ft</p>
-                <button onclick="addToCart('product1', 'Kard', 10000)">Kosárhoz adás</button>
-            </section>
+        <div class="container">
+            <main>
+                <section class="product" id="product1">
+                    <img src="/Game/képek/kard.png">
+                    <h2>kard</h2>
+                    <p>kard</p>
+                    <p class="price">10000 Ft</p>
+                    <button onclick="addToCart('product1', 'Kard', 10000)">Kosárhoz adás</button>
+                </section>
 
-            <section class="product" id="product2">
-                <img src="/Game/képek/kulcs.png">
-                <h2>Mindent nyitó kulcs</h2>
-                <p>kulcs</p>
-                <p class="price">15000 Ft</p>
-                <button onclick="addToCart('product2', 'Kulcs', 15000)">Kosárhoz adás</button>
-            </section>
+                <section class="product" id="product2">
+                    <img src="/Game/képek/kulcs.png">
+                    <h2>kulcs</h2>
+                    <p>kulcs</p>
+                    <p class="price">15000 Ft</p>
+                    <button onclick="addToCart('product2', 'Kulcs', 15000)">Kosárhoz adás</button>
+                </section>
 
-            <section class="product" id="product3">
-                <img src="/Game/képek/karakter1.png">
-                <h2>Legjobb karakter1</h2>
-                <p>Karakter</p>
-                <p class="price">15000 Ft</p>
-                <button onclick="addToCart('product3', 'Karakter', 20000)">Kosárhoz adás</button>
-            </section>
+                <section class="product" id="product3">
+                    <img src="/Game/képek/karakter1.png">
+                    <h2>karakter1</h2>
+                    <p>Karakter</p>
+                    <p class="price">15000 Ft</p>
+                    <button onclick="addToCart('product3', 'Karakter', 20000)">Kosárhoz adás</button>
+                </section>
 
-            <section class="product" id="product4">
-                <img src="/Game/képek/karakter2.png">
-                <h2>Legjobb karakter2</h2>
-                <p>Karakter</p>
-                <p class="price">15000 Ft</p>
-                <button onclick="addToCart('product4', 'Karakter', 20000)">Kosárhoz adás</button>
-            </section>
+                <section class="product" id="product4">
+                    <img src="/Game/képek/karakter2.png">
+                    <h2>karakter2</h2>
+                    <p>Karakter</p>
+                    <p class="price">15000 Ft</p>
+                    <button onclick="addToCart('product4', 'Karakter', 20000)">Kosárhoz adás</button>
+                </section>
 
-            <section class="product" id="product5">
-                <img src="/Game/képek/karakter3.png">
-                <h2>Legjobb karakter3</h2>
-                <p>Karakter</p>
-                <p class="price">15000 Ft</p>
-                <button onclick="addToCart('product5', 'Karakter', 20000)">Kosárhoz adás</button>
-            </section>
-
-            <section class="product" id="product6">
-                <img src="/Game/képek/karakter4.png">
-                <h2>Legjobb karakter4</h2>
-                <p>Karakter</p>
-                <p class="price">15000 Ft</p>
-                <button onclick="addToCart('product6', 'Karakter', 20000)">Kosárhoz adás</button>
-            </section>
-        </main>
-
-        <aside>
-            <h2>Kosár</h2>
-            <ul id="cart">
-            </ul>
-            <button onclick="openCartPage()">Checkout</button>
-        </aside>
+                <section class="product" id="product5">
+                    <img src="/Game/képek/karakter3.png">
+                    <h2>karakter3</h2>
+                    <p>Karakter</p>
+                    <p class="price">15000 Ft</p>
+                    <button onclick="addToCart('product5', 'Karakter', 20000)">Kosárhoz adás</button>
+                </section>
+            </main>
         
-        <footer>
-            <p>&copy; 2023 My Webshop</p>
-        </footer>
-        <script src="main.js"></script>
+
+            <aside>
+                <h2>Kosár</h2>
+                <ul id="cart">
+                </ul>
+                <button onclick="openCartPage()">Checkout</button>
+            </aside>
+            
+            <footer>
+                <p>&copy; 2023 My Webshop</p>
+            </footer>
+            <script src="main.js"></script>
+        </div>
     </div>
 </body>
 </html>

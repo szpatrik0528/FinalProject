@@ -85,8 +85,8 @@ main {
     padding: 20px;
     margin: 10px;
     text-align: center;
-    max-width: 300px;
-    max-height: 210px;
+    max-width: auto;
+    max-height: 300px ;
 }
 
 .product img {
