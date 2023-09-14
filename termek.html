@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <title>Our Webshop</title>
 </head>
 <body>
     <div class="container">
     <header>
-        <h1>Termekek</h1>
-        <div class="header-content">
-            <button onclick="goBack()"><img src="/Game/képek/93634.png" id="back-button"></button>
-        </div>
+        <h1>Termékek</h1>
     </header>
 
     <nav class="navbar">
@@ -21,9 +19,21 @@
             <li><a href="termek.html">Termékek</a></li>
             <li><a href="jatek.html">Játék letőltése</a></li>
             <li><a href="rolunk.html">Rólunk</a></li>
-            <li><a href="elerheto.html">Elérhetőség</a></li>
+            <li><a href="elerheto.html">Elérhetőség</a></li>                
+            <li class="logo"><a href="kosar.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
-</div>
+    <main>
+
+    </main>
+    <aside>
+        <h2>Kosár</h2>
+        <ul id="cart">
+        </ul>
+        <button onclick="openCartPage()">Checkout</button>
+    </aside>
+    
+    <script src="main.js"></script>
+    </div>
 </body>
 </html>

@@ -113,6 +113,8 @@ aside {
     margin: 10px;
     text-align: center;
     max-width: 300px;
+    justify-content: center;
+    
 }
 
 footer {
@@ -180,3 +182,4 @@ button {
 #back-button{
     background-color: #fff;
 }
+
