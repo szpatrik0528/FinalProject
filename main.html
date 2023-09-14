@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>Webshopunk</h1>
         </header>
-        
-        
+
+
         <nav class="navbar">
             <ul>
-                <li><a href="main.html">Főoldal</a></li>
-                <li><a href="termek.html">Termékek</a></li>
-                <li><a href="jatek.html">Játék letőltése</a></li>
-                <li><a href="rolunk.html">Rólunk</a></li>
-                <li><a href="elerheto.html">Elérhetőség</a></li>
-                <li class="logo"><button onclick="openCartPage()"><i class="fa-solid fa-cart-shopping"></i></button></li>
+                <div class="row">
+                    <div class="col-5">
+                        <li><a href="main.html">Főoldal</a></li>
+                        <li><a href="termek.html">Termékek</a></li>
+                        <li><a href="jatek.html">Játék letőltése</a></li>
+                        <li><a href="rolunk.html">Rólunk</a></li>
+                        <li><a href="elerheto.html">Elérhetőség</a></li>
+                        <li class="logo"><button onclick="openCartPage()"><i
+                                    class="fa-solid fa-cart-shopping"></i></button></li>
+                    </div>
+                    <div class="regform col-7">
+                        <form action="">
+                            <label for="">Név:</label>
+                            <br>
+                            <input type="text">
+                            <br>
+                            <label for="">Jelszó:</label>
+                            <br>
+                            <input type="password">
+                        </form>
+                        <li><button onclick="">Bejelentkezés</button></li>
+                        <li><a id="regisztralas" href="regisztralas.html" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">Regisztráció</a></li>
+                    </div>
+                </div>
             </ul>
         </nav>
 
@@ -68,7 +88,7 @@
                     <button onclick="addToCart('product5', 'Karakter', 20000)">Kosárhoz adás</button>
                 </section>
             </main>
-        
+
 
             <aside>
                 <h2>Kosár</h2>
@@ -76,7 +96,7 @@
                 </ul>
                 <button onclick="openCartPage()">Checkout</button>
             </aside>
-            
+
             <footer>
                 <p>&copy; 2023 My Webshop</p>
             </footer>
@@ -84,4 +104,5 @@
         </div>
     </div>
 </body>
+
 </html>
