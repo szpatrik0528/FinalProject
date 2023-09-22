@@ -51,3 +51,38 @@ function openCartPage() {
 function goBack() {
     window.history.back();
 }
+
+const storedCart = JSON.parse(localStorage.getItem('cart')) || {};
+
+        // Function to display cart items
+        function displayCart() {
+            const cartList = document.getElementById('cart-list');
+            const cartTotal = document.getElementById('cart-total');
+            let total = 0;
+
+            cartList.innerHTML = '';
+
+            for (const productId in storedCart) {
+                const { name, price, quantity } = storedCart[productId];
+                const listItem = document.createElement('li');
+                listItem.textContent = `${name} - ${price} Ft x ${quantity}`;
+                cartList.appendChild(listItem);
+                total += price * quantity;
+            }
+
+            // Hozzáadjuk a végösszeget a lista alatt, nem a listához
+            cartTotal.textContent = `Végösszeg: ${total.toFixed(0)} Ft`;
+        }
+
+        // Initial cart display
+        displayCart();
+
+
+const paymentButton = document.getElementById('payment-button');
+
+paymentButton.addEventListener('click', function () {
+    
+    window.location.href = 'payment.html';
+});
+
+

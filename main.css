@@ -241,3 +241,28 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+button#payment-button {
+    width: 80px;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    display: inline;
+}
+
+form#payment-form {
+    text-align: center;
+    justify-items: center;
+}
+label{
+    color: #333;
+}
+
+h1.fizetes{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#payment{
+    width: 300px;
+}

@@ -17,42 +17,19 @@
         <ul id="cart-list">
         </ul>
         </main>
+        <button id="payment-button">Fizetés</button>
         <li id="cart-total"></li>
+
+        
 
         
         <footer>
             <p>&copy; 2023 My Webshop</p>
         </footer>
 
-    <script>
-        // Retrieve cart data from localStorage
-        const storedCart = JSON.parse(localStorage.getItem('cart')) || {};
-
-        // Function to display cart items
-        function displayCart() {
-            const cartList = document.getElementById('cart-list');
-            const cartTotal = document.getElementById('cart-total');
-            let total = 0;
-
-            cartList.innerHTML = '';
-
-            for (const productId in storedCart) {
-                const { name, price, quantity } = storedCart[productId];
-                const listItem = document.createElement('li');
-                listItem.textContent = `${name} - ${price} Ft x ${quantity}`;
-                cartList.appendChild(listItem);
-                total += price * quantity;
-            }
-
-            // Hozzáadjuk a végösszeget a lista alatt, nem a listához
-            cartTotal.textContent = `Végösszeg: ${total.toFixed(0)} Ft`;
-        }
-
-        // Initial cart display
-        displayCart();
+    <script src="main.js">
+        
     </script>
-    <!-- ... Your existing HTML code ... -->
-    
     <style>
         #cart-total-container {
             text-align: right;
