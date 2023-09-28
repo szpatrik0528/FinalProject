@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -23,24 +23,24 @@
                     <div class="col-5">
                         <li><a href="main.html">Főoldal</a></li>
                         <li><a href="termek.html">Termékek</a></li>
-                        <li><a href="jatek.html">Játék letőltése</a></li>
+                        <li><a href="jatek.html">Játék letöltése</a></li>
                         <li><a href="rolunk.html">Rólunk</a></li>
                         <li><a href="elerheto.html">Elérhetőség</a></li>
-                        <li class="logo"><button onclick="openCartPage()"><i
-                                    class="fa-solid fa-cart-shopping"></i></button></li>
+                        <li class="logo"><button onclick="openCartPage()"><i class="fa-solid fa-cart-shopping"></i></button></li>
                     </div>
                     <div class="regform col-7">
                         <form action="">
-                            <label for="">Név:</label>
-                            <br>
-                            <input type="text">
-                            <br>
-                            <label for="">Jelszó:</label>
-                            <br>
-                            <input type="password">
+                            <div class="input-group">
+                                <label for="nev">Név:</label><br>
+                                <input type="text" id="nev">
+                            </div>
+                            <div class="input-group">
+                                <label for="jelszo">Jelszó:</label><br>
+                                <input type="password" id="jelszo">
+                            </div>
+                            <button onclick="">Bejelentkezés</button>
+                            <li><a id="regisztralas" href="regisztralas.html" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">Regisztráció</a></li>
                         </form>
-                        <li><button onclick="">Bejelentkezés</button></li>
-                        <li><a id="regisztralas" href="regisztralas.html" onclick="window.open(this.href, '_blank', 'width=500,height=500'); return false;">Regisztráció</a></li>
                     </div>
                 </div>
             </ul>

@@ -29,34 +29,25 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <div class="card" style="width:300px">
-                    <img class="card-img-top infoimg" src="./avatars/avatar2.jfif" alt="Card image">
-                    <div class="card-body">
-                      <h4 class="card-title">Szívós Patrik</h4>
-                      <p class="card-text">Webshop</p>
-                      <a href="#" class="btn btn-primary">Üzenet</a>
+                <div class="card-container">
+                    <div class="card" style="width: 300px;">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img class="card-img-top infoimg" src="./avatars/avatar2.jfif" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Szívós Patrik</h4>
+                                    <p class="card-text">Webshop</p>
+                                    <div class="flip-card-front"><p></p><button id="flip-card-btn-turn-to-back">Üzenet</button></div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <textarea id="message-text" placeholder="Írjon üzenetet..."></textarea>
+                                <button id="send-button" class="btn btn-success">Küldés</button>
+                            </div>
+                            <div class="flip-card-back"><p>Oldal</p><button id="flip-card-btn-turn-to-front">Vissza</button></div>
+                        </div>
                     </div>
-                  </div>
-            </div>
-            <div class="col-3">
-                <div class="card" style="width:300px">
-                    <img class="card-img-top infoimg" src="./avatars/avatar1.jfif" alt="Card image">
-                    <div class="card-body">
-                      <h4 class="card-title">Sándor Norbert</h4>
-                      <p class="card-text">Adatbázis</p>
-                      <a href="#" class="btn btn-primary">Üzenet</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3">
-                <div class="card " style="width:300px">
-                    <img class="card-img-top infoimg" src="./avatars/avatar3.jfif" alt="Card image">
-                    <div class="card-body">
-                      <h4 class="card-title">Demeter István</h4>
-                      <p class="card-text">Játék</p>
-                      <a href="#" class="btn btn-primary">Üzenet</a>
-                    </div>
-                  </div>
+                </div>
             </div>
         </div>
     </div>
@@ -65,6 +56,7 @@
         <p>&copy; 2023 My Webshop</p>
     </footer>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
