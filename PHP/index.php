@@ -1,10 +1,26 @@
-<?php 
+<?php
+
 header('Content-Type: text/html; charset=utf-8');
-$menuItem = filter_input(INPUT_GET, "menuItem", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-var_dump($menuItem);
-require_once ('menu.php');
-require_once('head.php');
-require_once('body.php');
+session_start();
+require_once './classes/Database.php';
+$db = new Database("localhost", "root", "", "jatek");
+
+if (!isset($_SESSION['login'])) {
+    $_SESSION['login'] = false;
+}
+
+require_once './layout/head.php';
 ?>
-<link rel="stylesheet" href="main.css"/>
-<script src="main.js">
+
+<body>
+    
+    <?php
+    $menu = filter_input(INPUT_GET, "menu");
+    require_once './layout/header.php';
+    require_once './layout/menu.php';
+    require_once './tartalom.php';
+    require_once './layout/footer.php';
+    ?>
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
