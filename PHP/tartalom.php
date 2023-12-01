@@ -13,6 +13,9 @@ switch ($menu) {
     case 'rolunk':
         require_once './pages/rolunk.php';
         break;
+    case 'termekek':
+        require_once './pages/termekek.php';
+        break;
     default:
         require_once './pages/home.php';
         break;

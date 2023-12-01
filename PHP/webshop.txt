@@ -1,0 +1,7 @@
+weboldal:
+- ranglista oldal : user halal, pont; ranglist mellette egy gomb ami lenulláza a halálok számát
+- register, login
+- rolunk
+- bolt: extra pálya, halál nullázó, skin?, 
+- kosár
+- 

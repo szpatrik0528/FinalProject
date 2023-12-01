@@ -13,9 +13,9 @@
                 <?php
                 if ($_SESSION['login']) {
                     echo '<li class="nav-item">
-                        <a class="nav-link ' . ($menu == 'logut' ? ' active' : '') . '" href="index.php?menu=logout">Kilépés</a>
+                        <a class="nav-link ' . ($menu == 'logout' ? ' active' : '') . '" href="index.php?menu=logout">Kilépés</a>
                 </li>' . '<li class="nav-item">
-                        <a class="nav-link' . ($menu == 'home' ? ' active' : '') . '" aria-current="page" href="home.php?menu=home">Home</a>
+                        <a class="nav-link' . ($menu == 'termekek' ? ' active' : '') . '" aria-current="page" href="termekek.php?menu=termekek" >Termékek</a>
                       </li>';
                 } else {
                     echo '<li class = "nav-item">
